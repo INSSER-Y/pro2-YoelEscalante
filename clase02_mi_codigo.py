@@ -48,3 +48,36 @@ while adiv != sec:
     adiv = int(input(f"Vuelva a intentarlo : "))
 if adiv == sec:
     print("Adivinaste!")
+#ejercicio6refactorizacion
+def calcular_area_rectangulo(base, altura):
+    area = base * altura
+    return areaadd
+def mostrar_area_rectangulo(numero, base, altura):
+    area = calcular_area_rectangulo(base, altura)
+    print(f"El area del rectangulo {numero}({base}x{altura} )es : {area}")
+mostrar_area_rectangulo(1, 10, 5)
+
+
+
+
+
+
+
+
+
+
+"""codigo para poder llamar una funcion en especifico en la consola """
+import sys
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        funcion = sys.argv[1]
+
+        if funcion == "saludar":
+            saludar()
+        elif funcion == "despedir":
+            despedir()
+        else:
+            print("Función no reconocida.")
+    else:
+        print("Por favor, especifica una función.")
