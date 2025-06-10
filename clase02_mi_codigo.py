@@ -1,6 +1,6 @@
-print(¡Estoy aprendiendo Git y Github en Prog II!)
+"""print(¡Estoy aprendiendo Git y Github en Prog II!)
 nombre = Yoel Escalante 
-print(fEste commit lo esta haciendo: {Yoel})
+print(fEste commit lo esta haciendo: {Yoel})"""
 #ejercicio1
 """Estudiante Yoel Escalante Escobar"""
 print("Escriba su edad")
@@ -13,3 +13,18 @@ if edad < 13 and edad >=0:
   print("Te recomendamos ver peliculas clasificacion G o PG!")
 if edad < 0:
   print("Edad no valida!")
+#ejercicio2
+print("Recorriendo un String")
+for numero in range(3):
+    print(numero)
+print ("Recorriendo un String:")
+nombre = (input())
+for letra in nombre:
+    print(letra)    
+print ("Bucle while:")
+num = int(input())
+contador = 0
+while contador < num:
+    print (f"contador es : {contador}")
+    contador+=1
+print("Bucle while terminado")
