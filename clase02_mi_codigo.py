@@ -13,7 +13,7 @@ if edad < 13 and edad >=0:
   print("Te recomendamos ver peliculas clasificacion G o PG!")
 if edad < 0:
   print("Edad no valida!")
-#ejercicio2
+#practica
 print("Recorriendo un String")
 for numero in range(3):
     print(numero)
