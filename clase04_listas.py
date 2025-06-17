@@ -7,10 +7,11 @@ print()
 #Listas de comidas favoritas
 comidas_favoritas = ["pizza", "hamburguesas", "tacos", "sushi", "pasta"]
 for nombre in comidas_favoritas:
+    mis_comidas_favoritas = input
     print(f"Mis comidas favoritas son {nombre}")
 print()
 #Listas de nombres de estudiantes
-nombres_estudiantes = ['Carlos', 'Ana', 'Miguel', 'Sofia', 'Diego']
+nombres_estudiantes = ['Carlos', 'Anahi', 'Miguel', 'Sofia', 'Diego']
 for nombre in nombres_estudiantes:
   print(f"Bienvenido al equipo, {nombre}!")
 print()
