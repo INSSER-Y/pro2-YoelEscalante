@@ -4,16 +4,26 @@ hobbys = ["leer", "viajar", "jugar videojuegos", "escuchar musica", "ver pelicul
 for nombre in hobbys:
     print(f"Mis hobbis son {nombre}")
 print()
-#Listas de comidas favoritas
-comidas_favoritas = ["pizza", "hamburguesas", "tacos", "sushi", "pasta"]
-for nombre in comidas_favoritas:
-    mis_comidas_favoritas = input
-    print(f"Mis comidas favoritas son {nombre}")
+#comidas favoritas
+# Lista vacía para almacenar las comidas favoritas
+comidas_favoritas = []
+cantidad = int(input("¿Cuántas comidas favoritas quieres ingresar? "))
+# Usamos un bucle para agregar cada comida
+for i in range(cantidad):
+    comida = input(f"Ingrese la comida favorita #{i + 1}: ")
+    comidas_favoritas.append(comida)
+print("\nMis comidas favoritas son:")
+for comida in comidas_favoritas:
+    print(f"- {comida}")
 print()
 #Listas de nombres de estudiantes
-nombres_estudiantes = ['Carlos', 'Anahi', 'Miguel', 'Sofia', 'Diego']
+nombres_estudiantes = []
+cantidad = int(input("¿Cuántos estudiantes quieres ingresar? "))
+for i in range(cantidad):
+    nombre = input(f"Ingrese el nombre del estudiante #{i + 1}: ")
+    nombres_estudiantes.append(nombre)
 for nombre in nombres_estudiantes:
-  print(f"Bienvenido al equipo, {nombre}!")
+    print(f"Bienvenido al equipo, {nombre}!")
 print()
 ##Crear una lista de notas numericas
 mis_notas = [85.5,92,78,88.5,95,82]
