@@ -45,3 +45,24 @@ for fila in vacio:
     for elemento in fila:
         print(elemento, end="\t")
     print()
+
+print()
+print()
+# 4. Crear la misma matriz usando comprensión de listas (hace lo mismo pero mas corto)
+print("\n▶ MATRIZ 5x5 CON CEROS (usando comprensión de listas):\n")
+
+# Esta línea crea una matriz 5x5 con ceros de forma compacta
+matriz_comprension = [[0 for j in range(5)] for i in range(5)]
+
+# Imprimimos la matriz generada
+for fila in matriz_comprension:
+    for elemento in fila:
+        print(elemento, end="\t")
+    print()
+
+#Explicación visual para programadores novatos
+print("\nEXPLICACIÓN:")
+print('''\nmatriz_comprension = [[0 for j in range(5)] for i in range(5)]\n
+↳ Parte interna: [0 for j in range(5)] → crea una fila con cinco ceros
+↳ Parte externa: for i in range(5) → repite esa fila cinco veces
+Resultado: Una matriz de 5x5 completamente llena de ceros.\n''')
