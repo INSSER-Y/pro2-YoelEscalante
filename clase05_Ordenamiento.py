@@ -20,28 +20,22 @@ if __name__ == "__main__":
 lista1 = [6, 3, 8, 2, 5]
 ordenamiento_burbuja(lista1)
 assert lista1 == [2, 3, 5, 6, 8], "Fallo en Caso 1"
-
 # Caso 2: Lista ya ordenada
 lista2 = [1, 2, 3, 4, 5]
 ordenamiento_burbuja(lista2)
 assert lista2 == [1, 2, 3, 4, 5], "Fallo en Caso 2"
-
 # Caso 3: Lista ordenada a la inversa (peor caso)
 lista3 = [5, 4, 3, 2, 1]
 ordenamiento_burbuja(lista3)
 assert lista3 == [1, 2, 3, 4, 5], "Fallo en Caso 3"
-
 # Caso 4: Lista con elementos duplicados
 lista4 = [5, 1, 4, 2, 8, 5, 2]
 ordenamiento_burbuja(lista4)
 assert lista4 == [1, 2, 2, 4, 5, 5, 8], "Fallo en Caso 4"
-
 # Caso borde: Lista vacía
 assert ordenamiento_burbuja([]) == [], "Fallo en lista vacía"
-
 # Caso borde: Lista con un solo elemento
 assert ordenamiento_burbuja([42]) == [42], "Fallo en lista con un solo elemento"
-
 print("¡Todas las pruebas ordenamiento burbuja pasaron! ✅")
 #Prueba de la funcion
 lista_a_ordenar = [64,34,25,12,22,11,90]
@@ -74,29 +68,60 @@ if __name__ == "__main__":
 lista1 = [6, 3, 8, 2, 5]
 ordenamiento_insercion(lista1)
 assert lista1 == [2, 3, 5, 6, 8], "Fallo en Caso 1"
-
 # Caso 2: Lista ya ordenada
 lista2 = [1, 2, 3, 4, 5]
 ordenamiento_insercion(lista2)
 assert lista2 == [1, 2, 3, 4, 5], "Fallo en Caso 2"
-
 # Caso 3: Lista ordenada a la inversa (peor caso)
 lista3 = [5, 4, 3, 2, 1]
 ordenamiento_insercion(lista3)
 assert lista3 == [1, 2, 3, 4, 5], "Fallo en Caso 3"
-
 # Caso 4: Lista con duplicados
 lista4 = [5, 1, 4, 2, 8, 5, 2]
 ordenamiento_insercion(lista4)
 assert lista4 == [1, 2, 2, 4, 5, 5, 8], "Fallo en Caso 4"
-
 # Caso borde: Lista vacía
 assert ordenamiento_insercion([]) == [], "Fallo en lista vacía"
-
 # Caso borde: Lista con un solo elemento
 assert ordenamiento_insercion([42]) == [42], "Fallo en lista con un solo elemento"
-
 print("¡Todas las pruebas del ordenamiento por inserción pasaron! ✅")
 print()
 
 #
+def merge_sort(lista):
+    if len(lista) <= 1:
+        return lista
+
+    medio = len(lista) // 2
+    mitad_izquierda = lista[:medio]
+    mitad_derecha = lista[medio:]
+
+    izquierda_ordenada = merge_sort(mitad_izquierda)
+    derecha_ordenada = merge_sort(mitad_derecha)
+
+    return merge(izquierda_ordenada, derecha_ordenada)
+
+def merge(izquierda, derecha):
+    resultado = []
+    i = j = 0
+
+    # Mientras haya elementos en ambas listas
+    while i < len(izquierda) and j < len(derecha):
+        if izquierda[i] < derecha[j]:
+            resultado.append(izquierda[i])
+            i += 1
+        else:
+            resultado.append(derecha[j])
+            j += 1
+
+    # Añadir los restos de cada lista si quedan
+    resultado.extend(izquierda[i:])
+    resultado.extend(derecha[j:])
+    return resultado
+if __name__ == "__main__":
+    numeros = [6, 3, 8, 2, 5]
+    print("Antes:", numeros)
+    numeros = merge_sort(numeros)
+    print("Después:", numeros)
+print()
+
