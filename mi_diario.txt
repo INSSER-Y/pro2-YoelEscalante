@@ -3,5 +3,6 @@ Hoy aprendí sobre archivos en Python.
 El modo 'w' borra todo antes de escribir. ¡Qué miedo!
 ¡Pero también es muy útil para comenzar desde cero!
 Querido diario,
-y pues mp se
-chau
+hoy di mi examen
+me fue relativamente bien
+y el lunes toca mi defensa del proyecto

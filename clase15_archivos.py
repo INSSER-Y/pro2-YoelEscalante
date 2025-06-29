@@ -1,8 +1,6 @@
 # Ejercicio 1: Crear y escribir en un archivo de texto llamado "mi_diario.txt"
-
 # Paso 1: Definimos el nombre del archivo
 nombre_archivo = "mi_diario.txt"
-
 # Paso 2: Usamos 'with open(...)' en modo escritura ('w')
 # Esto Crea el archivo si no existe, y lo sobreescribe si ya existe.
 with open(nombre_archivo, "w") as diario_file:
@@ -24,10 +22,8 @@ try:
             print(linea.strip())  # .strip() elimina el salto de línea al final
 except FileNotFoundError:
     print(f"❌ Error: El archivo '{nombre_archivo}' no existe.")
-
 # Paso 1: Definir el nombre del archivo
 nombre_archivo = "mi_diario.txt"
-
 # Paso 2: Abrir en modo 'append' (agregar al final sin borrar lo anterior)
 with open(nombre_archivo, "a") as diario_file:
     print("")
@@ -37,6 +33,5 @@ with open(nombre_archivo, "a") as diario_file:
         if entrada.lower() == "fin":
             break
         diario_file.write(entrada + "\n")
-
 # Paso 3: Confirmar que se guardaron las entradas
 print("Se guardo el texto")
